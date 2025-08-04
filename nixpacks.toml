@@ -1,5 +1,10 @@
 [phases.setup]
-nixPkgs = ["ffmpeg"]
+nixPkgs = ["ffmpeg", "python3", "wget", "unzip"]
+
+[phases.install]
+cmds = [
+  "pip3 install gdown"
+]
 
 [start]
 cmd = "sh ./start.sh"
